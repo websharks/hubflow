@@ -212,6 +212,37 @@ cmd_default() {
 		git config hubflow.branch.develop "$develop_branch"
 	fi
 
+	# add a sync path if one does not exist yet (and the functionality is enabled)
+	local sync_path
+	if [ ! flag sync_path || (hubflow_has_sync_path_configured && ! flag force) ]; then
+		sync_path=$(git config --get hubflow.path.sync)
+	else
+		echo
+		echo "Please provide the path to a synchronized repo directory."
+
+		local should_check_existence
+		local default_suggestion
+		should_check_existence=YES
+		default_suggestion=
+
+		printf "Path to a synchronized repo directory: [$default_suggestion] "
+		if flag ask; then
+			read answer
+		else
+			printf "\n"
+		fi
+		sync_path=${answer:-$default_suggestion}
+
+		# store the path to a synchronized repo directory
+		git config hubflow.path.sync "$sync_path"
+
+		# check existence in case it does not exist; or is not a Git repo
+		if [ "$should_check_existence" = "YES" ]; then
+			hubflow_has_sync_path_configured || \
+				die "Synchronized repo directory '$sync_path' does not exist; or is not a Git repo."
+		fi
+	fi
+
 	# Creation of HEAD
 	# ----------------
 	# We create a HEAD now, if it does not exist yet (in a fresh repo). We need

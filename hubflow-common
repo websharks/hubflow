@@ -184,6 +184,11 @@ hubflow_has_develop_configured() {
 	[ "$develop" != "" ] && git_local_branch_exists "$develop"
 }
 
+hubflow_has_sync_path_configured() {
+	local sync_path=$(git config --get hubflow.path.sync)
+	[ "$sync_path" != "" ] && [ -d "$sync_path"/.git ]
+}
+
 hubflow_has_prefixes_configured() {
 	git config --get hubflow.prefix.feature >/dev/null 2>&1     && \
 	git config --get hubflow.prefix.release >/dev/null 2>&1     && \
@@ -197,6 +202,7 @@ hubflow_is_initialized() {
 	hubflow_has_develop_configured                   && \
 	[ "$(git config --get hubflow.branch.master)" !=    \
 	  "$(git config --get hubflow.branch.develop)" ] && \
+	git config --get hubflow.path.sync >/dev/null 2>&1     && \
 	hubflow_has_prefixes_configured
 }
 
@@ -205,8 +211,9 @@ hubflow_load_settings() {
 	export DOT_GIT_DIR=$(git rev-parse --git-dir 2>/dev/null)
 	export MASTER_BRANCH=$(git config --get hubflow.branch.master)
 	export DEVELOP_BRANCH=$(git config --get hubflow.branch.develop)
+	export SYNC_PATH=$(git config --get hubflow.path.sync)
 	export ORIGIN=$(git config --get hubflow.origin || echo origin)
-    export BRANCH=$(git_current_branch)
+   export BRANCH=$(git_current_branch)
 }
 
 hubflow_change_branch() {
