@@ -119,12 +119,11 @@ main() {
 }
 
 sync() {
-	if [ hubflow_has_sync_path_configured ]; then
-		echo
-		echo '---- Synchronizing repo: '"$SYNC_PATH"' ----'
-		echo
+	if hubflow_has_sync_path_configured; then
+		echo && echo '---- Synchronizing repo: `'"$SYNC_PATH"'` ----'
 		CWD="$(pwd)"
 		export IS_SYNC=YES
+		flags_reset
 		cd "$SYNC_PATH" && main "$@" && cd "$CWD"
 		export IS_SYNC=NO
 	fi
