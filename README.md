@@ -18,7 +18,7 @@ brew install hubflow-ws
 
 #### All Other Operating Systems
 
-1. `git clone https://github.com:websharks/hubflow.git`
+1. `git clone https://github.com/websharks/hubflow.git`
 2. `cd hubflow` && `git checkout master`
 3. `sudo ./install.sh`
 
