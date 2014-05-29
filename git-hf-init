@@ -215,7 +215,7 @@ cmd_default() {
 
 	# add a sync path if one does not exist yet (and the functionality is enabled)
 	local sync_path
-	if [ ! flag sync_path || (hubflow_has_sync_path_configured && ! flag force) ]; then
+	if { ! flag sync_path; } || { hubflow_has_sync_path_configured && ! flag force; }; then
 		sync_path=$(git config --get hubflow.path.sync)
 	else
 		echo
