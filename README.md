@@ -19,7 +19,7 @@ brew install hubflow-ws
 #### All Other Operating Systems
 
 1. `git clone https://github.com:websharks/hubflow.git`
-2. `cd hubflow` && git checkout master
+2. `cd hubflow` && `git checkout master`
 3. `sudo ./install.sh`
 
 Windows users will need something like Cygwin in order to use this extension.
@@ -32,6 +32,7 @@ Upgrading to the latest version of the HubFlow tools is very easy:
 #### Mac via [Homebrew](http://brew.sh/) (recommended)
 
 ```
+brew update
 brew upgrade hubflow-ws
 ```
 
