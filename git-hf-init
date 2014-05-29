@@ -54,6 +54,7 @@ parse_args() {
 cmd_default() {
 	DEFINE_boolean force false 'force setting of hubflow branches, even if already configured' f
 	DEFINE_boolean ask false 'ask for branch naming conventions' a
+	DEFINE_boolean sync_path false 'ask for a synchronized repo path' s
 	parse_args "$@"
 
 	if ! git rev-parse --git-dir >/dev/null 2>&1; then
