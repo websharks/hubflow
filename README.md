@@ -6,6 +6,9 @@ for [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/), w
 
 ![](http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png)
 
+![](https://cloud.githubusercontent.com/assets/53005/3305294/37040e0e-f654-11e3-8042-ae18b34891b7.png)
+
+
 Installation (WebSharks Flavor)
 ------------
 
