@@ -187,7 +187,7 @@ hubflow_has_develop_configured() {
 
 hubflow_has_sync_path_configured() {
 	local sync_path=$(git config --get hubflow.path.sync)
-	[ "$sync_path" != "" ] && [ -d "$sync_path"/.git ]
+	[ "$sync_path" != "" ] && [[ -d "$sync_path"/.git || -f "$sync_path"/.git ]]
 }
 
 hubflow_has_prefixes_configured() {
