@@ -2,7 +2,7 @@ HubFlow (WebSharks Flavor)
 =======
 
 Adds the 'git hf' Git extension to provide high-level repository operations
-for [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/), which is based on [Vincent Driessen’s original blog post](http://nvie.com/posts/a-successful-git-branching-model/).
+for [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/), which is based on [Vincent Driessen’s original blog post](http://nvie.com/posts/a-successful-git-branching-model/). See also: [WebSharks Flavor Changes](https://github.com/websharks/hubflow/blob/000000-dev/README.md#websharks-flavor-changes).
 
 ![](http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png)
 
@@ -52,10 +52,8 @@ Changelog
 
 To see what's new in each release, see our [Changelog](http://datasift.github.com/gitflow/ChangeLog.html).
 
-WebSharks Flavor
+WebSharks Flavor Changes
 -----------------------
-
-#### Changes
 
 - Added support for an additional synchronized repo that rides with the primary.
 - Added a scan for an existing `000000-dev` branch; if it exists we use this over the default name: `develop` for the "next release" branch.
