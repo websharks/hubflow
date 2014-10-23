@@ -4,7 +4,7 @@ HubFlow (WebSharks Flavor)
 Adds the 'git hf' Git extension to provide high-level repository operations
 for [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/), which is based on [Vincent Driessen’s original blog post](http://nvie.com/posts/a-successful-git-branching-model/). See also: [WebSharks Flavor Changes](https://github.com/websharks/hubflow/blob/000000-dev/README.md#websharks-flavor-changes).
 
-![](http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png)
+[![](http://nvie.com/img/git-model@2x.png)](http://nvie.com/posts/a-successful-git-branching-model/)
 
 ![](https://cloud.githubusercontent.com/assets/53005/3305294/37040e0e-f654-11e3-8042-ae18b34891b7.png)
 
