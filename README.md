@@ -8,15 +8,14 @@ for [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/), w
 
 ![](https://cloud.githubusercontent.com/assets/53005/3305294/37040e0e-f654-11e3-8042-ae18b34891b7.png)
 
-
 Installation (WebSharks Flavor)
 ------------
 
 #### Mac via [Homebrew](http://brew.sh/) (recommended)
 
-```
-brew tap websharks/homebrew-hubflow-ws
-brew install hubflow-ws
+```bash
+brew tap websharks/formulas
+brew install websharks-hubflow
 ```
 
 #### All Other Operating Systems
@@ -34,9 +33,9 @@ Upgrading to the latest version of the HubFlow tools is very easy:
 
 #### Mac via [Homebrew](http://brew.sh/) (recommended)
 
-```
+```bash
 brew update
-brew upgrade hubflow-ws
+brew upgrade websharks-hubflow
 ```
 
 #### All Other Operating Systems
