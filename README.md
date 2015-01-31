@@ -2,9 +2,9 @@ HubFlow (WebSharks Flavor)
 =======
 
 Adds the 'git hf' Git extension to provide high-level repository operations
-for [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/), which is based on [Vincent Driessen’s original blog post](http://nvie.com/posts/a-successful-git-branching-model/).
+for [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/), which is based on [Vincent Driessen’s original blog post](http://nvie.com/posts/a-successful-git-branching-model/). See also: [WebSharks Flavor Changes](https://github.com/websharks/hubflow/blob/000000-dev/README.md#websharks-flavor-changes).
 
-![](http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png)
+[![](http://nvie.com/img/git-model@2x.png)](http://nvie.com/posts/a-successful-git-branching-model/)
 
 ![](https://cloud.githubusercontent.com/assets/53005/3305294/37040e0e-f654-11e3-8042-ae18b34891b7.png)
 
@@ -51,6 +51,41 @@ Changelog
 ---------
 
 To see what's new in each release, see our [Changelog](http://datasift.github.com/gitflow/ChangeLog.html).
+
+WebSharks Flavor Changes
+-----------------------
+
+- Added support for an additional synchronized repo that rides with the primary.
+- Added a scan for an existing `000000-dev` branch; if it exists we use this over the default name: `develop` for the "next release" branch.
+
+### Repo Synchronization
+
+**To enable the synchronization functionality** (i.e. if you have both a lite/pro version you are maintaining together); use the `s` flag.
+
+#### Example...
+
+From your repo directory...
+```
+$ git hf init -asf
+```
+
+#### Usage...
+
+From your repo directory...
+```
+$ git hf init -asf
+```
+... just fill in the blanks where it asks for your configuration. Most of it can just be left with the default values. To clarify, there are three flags here. `a` = ask for configuration values, `s` = enable synchronization functionality (optional), and `f` = force a new set of config values, overriding any that already exist. I recommend always using these flags together; i.e. `git hf init -asf`
+
+**NOTE:** If you enable the `s` flag (synchronization) you will be asked for two config sets. That's normal. In synchronization mode all of your commands are duplicated across two repos.
+
+Once you are configured, you can do this...
+
+```
+$ git hf feature start 123
+```
+
+... where `123` is a GitHub issue that is connected to a feature branch.
 
 License Terms
 -------------
