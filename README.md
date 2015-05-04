@@ -94,7 +94,3 @@ HubFlow is published under the liberal terms of the BSD License, see the
 any modifications you make to the source code, you are very much encouraged and
 invited to contribute back your modifications to the community, preferably
 in a Github fork, of course.
-
----
-
-This project is now on Floobits too! [Watch us code](https://floobits.com/jaswsinc/hubflow/redirect) in real-time :-) <a href="https://floobits.com/jaswsinc/hubflow/redirect"><img alt="Floobits status" width="100" height="40" src="https://floobits.com/jaswsinc/hubflow.png" align="right" /></a>

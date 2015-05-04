@@ -19,5 +19,7 @@ Authors are (ordered by first commit date):
 - Emre Berge Ergenekon
 - Eric Holmes
 - Vedang Manerikar
+- Jason Caldwell
+- Raam Dev
 
 Portions derived from other open source works are clearly marked.
